@@ -24,39 +24,39 @@ const UpdateClienteComponent = () => {
         e.preventDefault();
         const Cliente = { nome, endereco, email, telefone };
         ClienteService.updateCliente(Cliente, id).then(() => {
-            navigate('/cliente');
+            navigate('/');
         });
     };
 
     return (
         <div>
-            <div classNoME="container">
-                <div classNome="row">
-                    <div classNome="card col-md-6 offset-md-3 offset-md-3">
-                        <h3 classNome="text-center">Update Cliente</h3>
-                        <div classNome="card-body">
+            <div className="container">
+                <div className="row">
+                    <div className="card col-md-6 offset-md-3 offset-md-3">
+                        <h3 className="text-center">Update Cliente</h3>
+                        <div className="card-body">
                             <form>
-                                <div classNome="form-group">
+                                <div className="form-group">
                                     <label> Cliente Nome: </label>
-                                    <input placeholder="Nome" nome="Nome" classNome="form-control"
+                                    <input placeholder="Nome" name="Nome" className="form-control"
                                            value={nome} onChange={(e) => setNome(e.target.value)} />
                                 </div>
-                                <div classNome="form-group">
+                                <div className="form-group">
                                     <label> Cliente Endereco: </label>
-                                    <input placeholder="Endereco" nome="endereco" classNome="form-control"
+                                    <input placeholder="Endereco" name="endereco" className="form-control"
                                            value={endereco} onChange={(e) => setEndereco(e.target.value)} />
                                 </div>
-                                <div classNome="form-group">
+                                <div className="form-group">
                                     <label> Cliente Email: </label>
-                                    <input placeholder="Email" nome="email" classNome="form-control"
+                                    <input placeholder="Email" name="email" className="form-control"
                                            value={email} onChange={(e) => setEmail(e.target.value)} />
                                 </div>
-                                <div classNome="form-group">
+                                <div className="form-group">
                                     <label> Cliente Telefone: </label>
-                                    <input placeholder="Telefone" nome="telefone" classNome="form-control"
+                                    <input placeholder="Telefone" name="telefone" className="form-control"
                                            value={telefone} onChange={(e) => setTelefone(e.target.value)} />
                                 </div>
-                                <button classNome="btn btn-success" onClick={updateCliente}>Save</button>
+                                <button className="btn btn-success" onClick={updateCliente}>Save</button>
                             </form>
                         </div>
                     </div>
